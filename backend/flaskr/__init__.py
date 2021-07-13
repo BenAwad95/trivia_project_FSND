@@ -19,12 +19,12 @@ def create_app(test_config=None):
   '''
   cors = CORS(app=app, response={r'/api/*': {'origins':'*'}})
 
-  @app.route('/cors-test')
-  # @cross_origin()
-  def cors_test():
-    return jsonify({
-      'massage':'Good Morning and good luck in your project.😊'
-    })
+  # @app.route('/cors-test')
+  # # @cross_origin()
+  # def cors_test():
+  #   return jsonify({
+  #     'massage':'Good Morning and good luck in your project.😊'
+  #   })
   '''
   @TODO: Use the after_request decorator to set Access-Control-Allow #Done
   '''
@@ -198,6 +198,7 @@ def create_app(test_config=None):
         if q['id'] not in pre_que_ids:
           question = q
           break
+    print(question)
     return jsonify({
       'question':question
     })
