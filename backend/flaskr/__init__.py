@@ -71,7 +71,7 @@ def create_app(test_config=None):
       'questions': questions[start:end],
       'total_questions': len(questions),
       'categories': categories,
-      'currentCategory': Category.query.get(1).type
+      'currentCategory': Category.query.get(1).type #I DO NOT UNDERSTAND WHAT currentCategory MEAN! SO I ADDED THE FIRST ONE!!
     })
 
   '''
